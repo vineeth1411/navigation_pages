@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block title %}
+    <title>DUMMY</title>
+    {% endblock %}
+
+
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/mdb.css' %}">
+    <style>
+        button{
+            width: fit-content;
+            height: 30%;
+            padding: 1%;
+            background-color: gray;
+            color: aquamarine;
+        }
+    </style>
+
+</head>
+<body>
+
+    <button><a href="{% url 'home' %}"><b> <u>HOME</u></b></a></button>
+    <button><a href="{% url 'registration' %}"><u><b>REGISTRATION</b></u></a></button>
+    <button><a href="{% url 'login' %}"><u><b>LOGIN</b></u></a></button>
+    {% block body_block %}
+    {% endblock %}
+
+    <script src="{% static 'js/jquery.js' %}"></script>
+    <script src="{% static 'js/popper.js' %}"></script>
+    <script src="{% static 'js/bootstrap.js' %}"></script>
+    <script src="{% static 'js/mdb.js' %}"></script>
+</body>
+</html>
